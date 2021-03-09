@@ -1,10 +1,11 @@
-
+#prueba
 try:
+#ingresa numeros el usuario
     n1 = int(input('ingrese primer numero: '))
     n2 = int(input('ingrese segundo numero: '))
     n3 = int(input('ingrese tercer numero: '))
     n4 = int(input('ingrese cuarto numero: '))
-
+#comprueva si es capicua
 
     if n1 >= 0:
         if str(n1) == str(n1)[:: -1]:
@@ -37,6 +38,7 @@ try:
             print('%i no es capicua.' % n4)
     else:
         print ('El numero debe ser positivo.')      
+#cierra la prueba
 except: 
         print ('Ingrese solo numeros enteros')
 

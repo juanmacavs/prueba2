@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta Te Ti</title>
+</head>
+    <style type="text/css">
+
+        .cuadrado
+        {
+            width: 100px;
+            height: 100px;
+            background-color: #AAA;
+            vertical-align: text-bottom;
+        }
+
+
+
+    </style>
+<body>
+    <div align="center">
+        <h1>TATETI</h1>
+        <div align="center">
+            <button class="cuadrado" id='c1' onclick="cambiarTurno('c1')"></button>
+            <button class="cuadrado" id='c2' onclick="cambiarTurno('c2')"></button>
+            <button class="cuadrado" id='c3' onclick="cambiarTurno('c3')"></button><br>
+            <button class="cuadrado" id='c4' onclick="cambiarTurno('c4')"></button>
+            <button class="cuadrado" id='c5' onclick="cambiarTurno('c5')"></button>
+            <button class="cuadrado" id='c6' onclick="cambiarTurno('c6')"></button><br>
+            <button class="cuadrado" id='c7' onclick="cambiarTurno('c7')"></button>
+            <button class="cuadrado" id='c8' onclick="cambiarTurno('c8')"></button>
+            <button class="cuadrado" id='c9' onclick="cambiarTurno('c9')"></button><br>
+        </div>
+        <br><br>
+        <button onclick="reiniciar(false)">Reiniciar</button>
+        <br>
+        <span id="turno">Turno: </span><br>
+        <span id="ganador"></span><br>
+    </div>
+
+    <script type="text/javascript">
+
+        var turno = "O";
+        var turnoz = 0;
+
+        function cambiarTurno(id)
+        {
+            document.getElementById(id).innerHTML = turno;
+            document.getElementById(id).disbled = true;
+            if(turnoz > 3)
+                comprobar(id, turno);
+            turno = (turno == "O") ? "X" : "O";
+            document.getElementById('turno').innerHTML = "Turno: " + turno;
+            turnozz++;
+        }
+
+        function comprobar (id, val)
+        {
+            var c1 = document.getElementById('c1').innerHTML
+            var c2 = document.getElementById('c2').innerHTML
+            var c3 = document.getElementById('c3').innerHTML
+            var c4 = document.getElementById('c4').innerHTML
+            var c5 = document.getElementById('c5').innerHTML
+            var c6 = document.getElementById('c6').innerHTML
+            var c7 = document.getElementById('c7').innerHTML
+            var c8 = document.getElementById('c8').innerHTML
+            var c9 = document.getElementById('c9').innerHTML
+
+
+            if((c1 == val && c2 == val && c3 == val) || (c4 == val && c5 == val && c6 == val) || (c7 == val && c8 == val && c9 == val))
+            {
+                document.getElementById('ganador').innerHTML = "El Ganador Es: " + val;
+                reiciar(true);
+            }
+            else if((c1 == val && c2 == val && c3 == val) || (c4 == val && c5 == val && c6 == val) || (c7 == val && c8 == val && c9 == val))
+            {
+                document.getElementById('ganador').innerHTML = "El Ganador Es: " + val;
+                reiciar(true);
+            }
+            else if((c1 == val && c2 == val && c3 == val) || (c4 == val && c5 == val && c6 == val) || (c7 == val && c8 == val && c9 == val))
+            {
+                document.getElementById('ganador').innerHTML = "El Ganador Es: " + val;
+                reiciar(true);
+            }
+        }
+        
+        function reiniciar(enodis)
+        {
+            turno = "O"
+            turnoz = 0;
+            document.getElementById('turno').innerHTML = "Turno: " + turno;
+            if(!enadis)
+                document.getElementById('ganadaro').innerHTML = "";
+            for (var i = 1; 1 <= 9; i++)
+            {
+                document.getElementById('c' + i).disabled = enadis;
+                if(!enadis)
+                    document.getElementById('c' + i).innerHTML + "";
+            }
+        }
+    
+    
+    </script>
+
+
+
+</body>
+</html>

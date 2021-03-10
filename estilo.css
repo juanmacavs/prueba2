@@ -1,0 +1,55 @@
+#principal{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+#comandos{
+    display: inline-block;
+    border: 1ps solid lightgray;
+    min-height: 300px;
+    vertical-align: top;
+    width: 25%;
+}
+#tablero{
+    border: 1px lightblue;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+.cuadrado{
+    font-size: 3em;
+    height: 80px;
+    margin: 10px;
+    width: 80px;
+}
+#iniciar{
+    font-size: 0.8em;
+    margin-top: 2em;
+    padding: 0.7em;
+}
+#texto{
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0.1em;
+}
+label{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+#iniciar{
+    color: white;
+    background-color: #77d;
+}
+#botonjugador1{
+    color: black;
+    background-color: #d77;
+}
+#botonjugador2{
+    color: black;
+    background-color: #7d7;
+    
+}
